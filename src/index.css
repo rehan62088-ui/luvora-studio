@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #08080a;
+    --surface-1: #0f1014;
+    --surface-2: #16171d;
+    --surface-border: rgba(255, 255, 255, 0.07);
+    --surface-border-subtle: rgba(255, 255, 255, 0.04);
+    --text-primary: #f4f4f6;
+    --text-secondary: #9ea3ae;
+    --text-muted: #5e6472;
+    --accent-glow: rgba(240, 240, 245, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #08080a;
+    color: #e4e4e7;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #23252d;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b3e4a;
+  }
+}
+
+.font-display {
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'Space Grotesk', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle architectural grain */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Realistic glass reflections */
+.glass-panel {
+  background: rgba(14, 15, 19, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 19, 24, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Metallic specular sheen */
+.sheen-metal {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.01) 50%, rgba(255,255,255,0.05) 100%);
+}
+
+/* Text balance utility */
+.text-balance {
+  text-wrap: balance;
+}
