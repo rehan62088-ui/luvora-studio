@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Project } from './types';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#08080a] text-[#E4E4E7] font-body selection:bg-white selection:text-black">
+      <Analytics />
       {/* 3-Zone Sticky Navbar */}
       <Navbar onStartProject={() => handleOpenEnquiry()} />
 
